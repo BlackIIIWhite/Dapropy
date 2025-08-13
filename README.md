@@ -32,7 +32,7 @@ Note: On first use, NLTK resources are downloaded automatically (e.g., `punkt`, 
 
 ```python
 import pandas as pd
-from Dapropy.Dapropy import Dapropy
+from dapropy import Dapropy
 
 # Example data
 train_df = pd.DataFrame({
