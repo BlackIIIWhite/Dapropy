@@ -1,5 +1,3 @@
-
-
 import os
 import re
 import string
@@ -527,8 +525,3 @@ class Dapropy:
             df = df[self.feature_order]
 
         return df
-
-
-
-
-
