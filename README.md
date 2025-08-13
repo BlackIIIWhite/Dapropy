@@ -166,7 +166,7 @@ You may delete this folder to reset the pipeline or change `folder_name` to main
 - Install locally for development:
 
 ```bash
-pip install Dapropy.
+pip install Dapropy
 ```
 
 ---
