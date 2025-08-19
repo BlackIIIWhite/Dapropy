@@ -4,7 +4,7 @@ A lightweight Python library for automated preprocessing of datasets containing 
 
 ---
 
-### ✨ Features
+### Features
 
 - **Mixed-type handling**: numeric, categorical, and text columns in one pipeline
 - **Missing values**: simple fill strategies or mixed-type KNN imputation
@@ -16,7 +16,7 @@ A lightweight Python library for automated preprocessing of datasets containing 
 
 ---
 
-### 📦 Installation
+###  Installation
 
 ```bash
 pip install git+https://github.com/BlackIIIWhite/Dapropy
@@ -28,7 +28,7 @@ Note: On first use, NLTK resources are downloaded automatically (e.g., `punkt`, 
 
 ---
 
-### 🚀 Quickstart
+###  Quickstart
 
 ```python
 import pandas as pd
@@ -39,7 +39,7 @@ train_df = pd.DataFrame({
     "age": [25, 30, None, 40],
     "city": ["NY", "LA", "LA", None],
     "review": [
-        "Loved it! 😊 <b>Great</b> service",
+        "Loved it!  <b>Great</b> service",
         "Okay visit, would return",
         None,
         "Terrible... won't go again http://example.com"
@@ -72,7 +72,7 @@ X_infer = p.pipeline(new_df)
 
 ---
 
-### ⚙️ Configuration
+###  Configuration
 
 - **target**: name of the target column (kept unscaled in output)
 - **strategyED**: categorical encoding strategy
@@ -93,7 +93,7 @@ X_infer = p.pipeline(new_df)
 
 ---
 
-### 🧠 What happens under the hood
+###  What happens under the hood
 
 Fit-time (`full_process`):
 1. Optional basic cleanup (`fix_data_inconsistencies`)
@@ -111,7 +111,7 @@ Inference-time (`pipeline`):
 
 ---
 
-### 📚 API Reference
+###  API Reference
 
 - `class Dapropy(target=None, strategyED='Label', imputer_strategy='KNN', cap_ratio=0.9, smooth_ratio=0.9, window_size=3, enable_text_processing=True, strategyNLP='bag_of_words', fix_datainconsistencies=False, partialnoisereduction=False, partialcap_outliersiqr=False, folder_name='transformers')`
   - Creates a preprocessing pipeline instance.
@@ -142,7 +142,7 @@ Inference-time (`pipeline`):
 
 ---
 
-### 📁 Persistence details
+###  Persistence details
 
 Artifacts are saved to `folder_name` (default: `transformers`):
 - `encoders.pkl`, `vectorizer.pkl`, `scalers.pkl`, `imputer.pkl`, `feature_order.pkl`
@@ -151,7 +151,7 @@ You may delete this folder to reset the pipeline or change `folder_name` to main
 
 ---
 
-### ✅ Tips
+###  Tips
 
 - Ensure all columns besides `target` that contain free text are of dtype `object` so they are cleaned/vectorized when `enable_text_processing=True`.
 - For stable inference, keep the same preprocessing configuration and `folder_name` between training and serving.
@@ -159,7 +159,7 @@ You may delete this folder to reset the pipeline or change `folder_name` to main
 
 ---
 
-### 🔧 Development
+###  Development
 
 - Python: 3.8+
 - Key dependencies: `pandas`, `numpy`, `scikit-learn`, `emoji`, `nltk`, `textblob`, `joblib`
@@ -171,7 +171,7 @@ pip install Dapropy
 
 ---
 
-### 📝 License
+### License
 
 MIT License. See `LICENSE.txt` for details.
 
